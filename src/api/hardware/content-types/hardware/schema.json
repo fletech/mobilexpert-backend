@@ -19,17 +19,6 @@
       "type": "uid",
       "targetField": "device_name"
     },
-    "image": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
     "capacity": {
       "type": "enumeration",
       "enum": [
@@ -76,6 +65,11 @@
       "relation": "oneToOne",
       "target": "api::hardware-manufacturer.hardware-manufacturer",
       "inversedBy": "hardware_device_name"
+    },
+    "media_sources": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sources.images"
     }
   }
 }

@@ -18,7 +18,7 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::hardware.hardware",
-      "inversedBy": "hardware_manufacturer"
+      "mappedBy": "hardware_manufacturer"
     }
   }
 }
