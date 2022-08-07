@@ -26,15 +26,10 @@
       "type": "integer"
     },
     "company_name": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::company.company"
-    },
-    "hardware_by_subscription": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::hardware.hardware",
-      "inversedBy": "subscriptions"
+      "displayName": "companies",
+      "type": "component",
+      "repeatable": false,
+      "component": "company.companies"
     }
   }
 }

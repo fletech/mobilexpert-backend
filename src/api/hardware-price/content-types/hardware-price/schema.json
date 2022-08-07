@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hardware_prices",
+  "info": {
+    "singularName": "hardware-price",
+    "pluralName": "hardware-prices",
+    "displayName": "Hardware Price",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "installments": {
+      "type": "component",
+      "repeatable": false,
+      "component": "installments.installments"
+    },
+    "cash_price": {
+      "type": "decimal"
+    },
+    "device_and_description": {
+      "type": "component",
+      "repeatable": false,
+      "component": "hardware.hardware-relations"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_hardware_hardware_relations",
+  "info": {
+    "displayName": "Hardware Relations",
+    "icon": "tablet-alt"
+  },
+  "options": {},
+  "attributes": {
+    "hardware_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::hardware.hardware"
+    },
+    "subscriptions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::subscription.subscription"
+    },
+    "companies": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::company.company"
+    }
+  }
+}

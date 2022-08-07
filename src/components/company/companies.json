@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_company_companies",
+  "info": {
+    "displayName": "companies",
+    "icon": "folder-open"
+  },
+  "options": {},
+  "attributes": {
+    "companies": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::company.company"
+    }
+  }
+}

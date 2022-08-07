@@ -4,7 +4,7 @@
   "info": {
     "singularName": "hardware",
     "pluralName": "hardwares",
-    "displayName": "Hardware",
+    "displayName": "hardware",
     "description": ""
   },
   "options": {
@@ -45,20 +45,6 @@
         "SmartWatch",
         "VR"
       ]
-    },
-    "subscriptions": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::subscription.subscription",
-      "mappedBy": "hardware_by_subscription"
-    },
-    "installments_price": {
-      "type": "component",
-      "repeatable": false,
-      "component": "installments.installments"
-    },
-    "cash_price": {
-      "type": "decimal"
     },
     "hardware_manufacturer": {
       "type": "relation",
