@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hardware_manufacturers",
+  "info": {
+    "singularName": "hardware-manufacturer",
+    "pluralName": "hardware-manufacturers",
+    "displayName": "hardware_manufacturer"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "manufacturer_brand_name": {
+      "type": "string"
+    },
+    "hardware_device_name": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::hardware.hardware",
+      "inversedBy": "hardware_manufacturer"
+    }
+  }
+}

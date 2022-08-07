@@ -1,0 +1,81 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hardwares",
+  "info": {
+    "singularName": "hardware",
+    "pluralName": "hardwares",
+    "displayName": "Hardware",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "device_name": {
+      "type": "string"
+    },
+    "device_id": {
+      "type": "uid",
+      "targetField": "device_name"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "capacity": {
+      "type": "enumeration",
+      "enum": [
+        "gb0",
+        "tb1",
+        "tb2",
+        "gb64",
+        "gb128",
+        "gb256",
+        "gb512"
+      ]
+    },
+    "hardware_colors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::hardware-color.hardware-color"
+    },
+    "type_of_hardware": {
+      "type": "enumeration",
+      "enum": [
+        "Mobile",
+        "Router",
+        "Tablet",
+        "SmartWatch",
+        "VR"
+      ]
+    },
+    "subscriptions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::subscription.subscription",
+      "mappedBy": "hardware_by_subscription"
+    },
+    "installments_price": {
+      "type": "component",
+      "repeatable": false,
+      "component": "installments.installments"
+    },
+    "cash_price": {
+      "type": "decimal"
+    },
+    "hardware_manufacturer": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::hardware-manufacturer.hardware-manufacturer",
+      "inversedBy": "hardware_device_name"
+    }
+  }
+}

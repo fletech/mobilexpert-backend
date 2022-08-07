@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hardware_colors",
+  "info": {
+    "singularName": "hardware-color",
+    "pluralName": "hardware-colors",
+    "displayName": "hardware_colors"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "color": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_installment_installments",
+  "info": {
+    "displayName": "installment",
+    "icon": "file-invoice-dollar",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "i_18": {
+      "type": "decimal"
+    },
+    "i_12": {
+      "type": "decimal"
+    },
+    "i_36": {
+      "type": "decimal"
+    },
+    "i_24": {
+      "type": "decimal"
+    },
+    "i_6": {
+      "type": "decimal"
+    }
+  }
+}
