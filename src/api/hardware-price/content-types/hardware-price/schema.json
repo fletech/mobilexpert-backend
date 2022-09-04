@@ -20,17 +20,20 @@
     "cash_price": {
       "type": "decimal"
     },
-    "hardware": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::hardware.hardware",
-      "inversedBy": "hardware_device_name"
-    },
-    "hardware_device_name": {
+    "hardware_subscriptions": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::subscription.subscription",
       "inversedBy": "hardware_by_subscriptions"
+    },
+    "slug": {
+      "type": "uid"
+    },
+    "device_name": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::hardware.hardware",
+      "inversedBy": "hardware_prices"
     }
   }
 }

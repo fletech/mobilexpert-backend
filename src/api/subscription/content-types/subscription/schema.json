@@ -35,7 +35,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::hardware-price.hardware-price",
-      "mappedBy": "hardware_device_name"
+      "mappedBy": "hardware_subscriptions"
     }
   }
 }
