@@ -30,6 +30,12 @@
       "type": "component",
       "repeatable": false,
       "component": "company.companies"
+    },
+    "hardware_by_subscriptions": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::hardware-price.hardware-price",
+      "mappedBy": "hardware_device_name"
     }
   }
 }

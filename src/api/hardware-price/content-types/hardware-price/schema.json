@@ -20,10 +20,17 @@
     "cash_price": {
       "type": "decimal"
     },
-    "device_and_description": {
-      "type": "component",
-      "repeatable": false,
-      "component": "hardware.hardware-relations"
+    "hardware": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::hardware.hardware",
+      "inversedBy": "hardware_device_name"
+    },
+    "hardware_device_name": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::subscription.subscription",
+      "inversedBy": "hardware_by_subscriptions"
     }
   }
 }

@@ -56,6 +56,12 @@
       "type": "component",
       "repeatable": false,
       "component": "sources.images"
+    },
+    "hardware_device_name": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::hardware-price.hardware-price",
+      "mappedBy": "hardware"
     }
   }
 }
